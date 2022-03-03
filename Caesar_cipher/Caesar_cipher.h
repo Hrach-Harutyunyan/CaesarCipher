@@ -140,7 +140,7 @@ DecodeCipher& DecodeCipher::operator = (const DecodeCipher& rhs) {
 
 bool DecodeCipher::smallStepInRange (int lineIndex, int step) {
     bool InRange = true;
-    if ((_m_line[lineIndex] + step < SMALL_LETTER_END)) {
+    if ((_m_line[lineIndex] + step <= SMALL_LETTER_END)) {
         return InRange;
     }
     return !InRange;
@@ -148,7 +148,7 @@ bool DecodeCipher::smallStepInRange (int lineIndex, int step) {
 
 bool DecodeCipher::capitalStepInRange (int lineIndex, int step) {
     bool InRange = true;
-    if ((_m_line[lineIndex] + step < CAPITAL_LETTER_END)) {
+    if ((_m_line[lineIndex] + step <= CAPITAL_LETTER_END)) {
         return InRange;
     } 
     return !InRange;
